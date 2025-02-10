@@ -13,7 +13,7 @@ This repository contains a script to deploy Ethereum-based smart contracts to an
 
 1. Clone the repository:
 
-   git clone https://github.com/username/evm-deploy-script.git
+   git clone https://github.com/ikhsanriff/deployer-SC
 
 cd deployer-SC
 
