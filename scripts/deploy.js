@@ -12,9 +12,10 @@ async function main() {
   // Get contract to deploy
   const Contract = await ethers.getContractFactory("NewTestnet");
 
-  // Deploy contract
+  // Deploy contract and wait for confirmation
   const contract = await Contract.deploy();
-  console.log("Contract deployed to:", contract.address);
+  await contract.waitForDeployment();
+  console.log("Contract deployed to:", await contract.getAddress());
 }
 
 main()
