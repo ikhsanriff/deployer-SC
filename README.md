@@ -21,6 +21,7 @@ cd deployer-SC
    ```bash
 npm install
 
+   ```bash
 Set up environment variables: Create a .env file in the root directory of the project and add your private key and RPC URL:
 PRIVATE_KEY=your-private-key
 RPC_URL=your-rpc-url
