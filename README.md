@@ -12,20 +12,19 @@ This repository contains a script to deploy Ethereum-based smart contracts to an
 ## Setup
 
 1. Clone the repository:
-   ```bash
+
    git clone https://github.com/username/evm-deploy-script.git
 
-   ```bash
 cd deployer-SC
 
-   ```bash
+2. Install dependencies
 npm install
 
-   ```bash
+3. Set up environment variables
 Set up environment variables: Create a .env file in the root directory of the project and add your private key and RPC URL:
 PRIVATE_KEY=your-private-key
 RPC_URL=your-rpc-url
 
-Run the deployment script
-   ```bash
+4. Run the deployment script
+
 npx hardhat run scripts/deploy.js --network custom
