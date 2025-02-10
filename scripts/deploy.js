@@ -1,18 +1,18 @@
+
 const { ethers } = require("hardhat");
 
 async function main() {
-  // Mendapatkan akun yang digunakan untuk deploy
   const [deployer] = await ethers.getSigners();
   console.log("Deploying contracts with the account:", deployer.address);
 
-  // Mengecek saldo deployer
-  const balance = await ethers.provider.getBalance(deployer.address); // Pastikan kita mengambil saldo deployer yang benar
-  console.log("Account balance:", ethers.utils.formatEther(balance)); // Gunakan formatEther dengan benar
+  // Check deployer balance
+  const balance = await ethers.provider.getBalance(deployer.address);
+  console.log("Account balance:", ethers.formatEther(balance));
 
-  // Mengambil kontrak yang ingin dideploy
+  // Get contract to deploy
   const Contract = await ethers.getContractFactory("NewTestnet");
 
-  // Deploy kontrak
+  // Deploy contract
   const contract = await Contract.deploy();
   console.log("Contract deployed to:", contract.address);
 }
